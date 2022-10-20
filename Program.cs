@@ -1,30 +1,30 @@
 ﻿using System;
 using System.Xml.Schema;
 
-namespace TryParse_örnekleri
+namespace TryParseExample
 {
     internal class Program
     {
         static void Main()
         {
-            SayiAl("Sayı giriniz: ");
+            InsertNumber("Insert the number: ");
 
         }
-        static int SayiAl(string mesaj)
+        static int InsertNumber(string message)
         {
-            int sayi;
+            int number;
 
             while (true)
             {
                 Console.Write(mesaj);
-                string giris = Console.ReadLine();
+                string insert = Console.ReadLine();
 
-                if (int.TryParse(giris, out sayi))
+                if (int.TryParse(insert, out number))
                 {
-                    return sayi;
+                    return number;
                 }
 
-                Console.WriteLine("Hatalı giriş yapıldı.");
+                Console.WriteLine("Incorrect entry made.");
 
             }
         }
